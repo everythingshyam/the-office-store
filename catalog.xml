@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogXSL.xsl"?>
+<catalog>
+    <book>
+        <title>You Can Win</title>
+        <author>Shiv Khera</author>
+        <price>23.70</price>
+    </book>
+    <book>
+        <title>Think Like A Monk</title>
+        <author>Jay Shetty</author>
+        <price>59.50</price>
+    </book>
+</catalog>
