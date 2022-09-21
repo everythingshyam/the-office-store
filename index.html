@@ -1,3 +1,8 @@
+<!-- 
+TODO resolve menu bar issue
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,17 +17,17 @@
 <body>
     <header>
         <div id="menu-bar-outer">
-            <span class="edgeCovers" id="leftCover"> l</span>
-            <span id="menu-bar" class="stay-on-top">
+            <span class="menuBarElements" id="leftCover" class="covers">hi </span>
+            <span id="menu-bar" class="menuBarElements">
                 <ul>
-                    <li>Shop</li>
-                    <li>Explore</li>
-                    <li>Categories</li>
-                    <li>Login/Signup</li>
-                    <li>Help</li>
+                    <li><a href="#main-header">Shop</a></li>
+                    <li><a href="#menu-bar-outer">Category</a></li>
+                    <!-- Hover on Category bring floating menu to navigate to the apt part of the page -->
+                    <li><a href="#menu-bar-outer">Login/SignUp</a></li>
+                    <li><a href="#menu-bar-outer">Help</a></li>
                 </ul>
             </span>
-            <span class="edgeCovers" id="rightCover"> right cover </span>
+            <span class="menuBarElements" id="rightCover" class="covers"> hi</span>
         </div>
         <div id="main-header">
             <span id="profile-pic">
@@ -43,19 +48,187 @@
         <!-- Floating Objects -->
 
         <!-- -------------------- -->
+        <div id="stationaries" class="category">
+            <h2>Stationaries</h2>
+            <span class="catalog-outer">
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/ballPen.jpg" alt="">
+                        <h3>Ball Point Pen</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/gelPen.jfif" alt="">
+                        <h3>Gel Pen</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/pencil.jpg" alt="">
+                        <h3>Mechanincal Pencils</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/protractor.jpg" alt="">
+                        <h3>Protractor</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/sharpner_eraser.webp" alt="">
+                        <h3>Sharpner,Eraser</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/compass.jpg" alt="">
+                        <h3>Compass</h3>
+                    </a>
+                </span>
+            </span>
+        </div>
+        <div id="notebooks" class="category">
+            <h2>Notebooks</h2>
+            <span class="catalog-outer">
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/notebookSpiral.jpg" alt="">
+                        <h3>Spirals</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/notebookPlain.jpg" alt="">
+                        <h3>Plain</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/notebookDiary.webp" alt="">
+                        <h3>Diary</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/projectFiles.jpg" alt="">
+                        <h3>Project File</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/stickyNotes.jpg" alt="">
+                        <h3>Sticky Notes</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/notebookRough.jpg" alt="">
+                        <h3>Rough Notebook</h3>
+                    </a>
+                </span>
+            </span>
+        </div>
+        <div id="art-n-crafts" class="category">
+            <h2>Art & Crafts</h2>
+            <span class="catalog-outer">
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/paintBrushSet.jpg" alt="">
+                        <h3>Paint Brushes Set</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/postelColourSet.jpg" alt="">
+                        <h3>Postel Colours Set</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/acrylicColorSet.jpg" alt="">
+                        <h3>Acrylic Colours Set</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/crayonColours.jpg" alt="">
+                        <h3>Crayon Colours Set</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/drawingNotebook.webp" alt="">
+                        <h3>A4 Drawing Notebook</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/scissors.jpg" alt="">
+                        <h3>Decorative Scissors</h3>
+                    </a>
+                </span>
+            </span>
+        </div>
+        <div id="desk-tools" class="category">
+            <h2>Desk Tools</h2>
+            <span class="catalog-outer">
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/laptopStand.jpg" alt="">
+                        <h3>Laptop Stand</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/smartphoneStand.jfif" alt="">
+                        <h3>Smartphone Stand</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/paperweight.jpg" alt="">
+                        <h3>Paperweight</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/stationaryHolder.jpg" alt="">
+                        <h3>Stationary Holder</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/tableCloth.jpg" alt="">
+                        <h3>Table Cloth</h3>
+                    </a>
+                </span>
+                <span class="catalog-inner">
+                    <a href="#">
+                        <img src="./images/lamp.jpg" alt="">
+                        <h3>Study Lamp</h3>
+                    </a>
+                </span>
+            </span>
+        </div>
+
     </div>
-    <div class="black-bg" id="seperator">
-    </div>
+    <!-- <div class="black-bg" id="seperator">
+    </div> -->
     <footer>
         <!-- Footer containing Contact Info, Privacy Policy -->
-        <div id="quick-links">
+        <span id="quick-links" class="menu-bar-class">
             <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Feedback/Report</a></li>
+                <li><a href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Contact%20Regarding%20Product%20Referred%20From%20Website" target="_blank">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website" target="_blank" >Feedback/Report</a></li>
             </ul>
-        </div>
+        </span>
     </footer>
+    </a>
 </body>
 
 </html>
+<!-- <a href="https://wa.me/7887977610/?text=urlencodedtext" class="wh">
+<button>Click me</button> -->
