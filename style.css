@@ -101,7 +101,7 @@ header {
 #menu-bar {
   /* color: black; */
   height: 50px;
-  width: 90vw;
+  width: 100vw;
   justify-content: center;
 }
 #menu-bar ul {
