@@ -1,8 +1,3 @@
-<!-- 
-TODO resolve menu bar issue
-
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,17 +12,14 @@ TODO resolve menu bar issue
 <body>
     <header>
         <div id="menu-bar-outer">
-            <!-- <span class="menuBarElements" id="leftCover" class="covers">hi </span> -->
             <span id="menu-bar" class="menuBarElements">
                 <ul>
-                    <li><a href="#main-header">Shop</a></li>
-                    <li><a href="#menu-bar-outer">Category</a></li>
-                    <!-- Hover on Category bring floating menu to navigate to the apt part of the page -->
-                    <li><a href="#menu-bar-outer">Login/SignUp</a></li>
-                    <li><a href="#menu-bar-outer">Help</a></li>
+                    <li><a class="invisible-btn" href="#main-header">Shop</a></li>
+                    <li><a class="invisible-btn" href="#menu-bar-outer">Category</a></li>
+                    <li><a class="invisible-btn" href="#menu-bar-outer">Login/SignUp</a></li>
+                    <li><a class="invisible-btn" href="#menu-bar-outer">Help</a></li>
                 </ul>
             </span>
-            <!-- <span class="menuBarElements" id="rightCover" class="covers"> hi</span> -->
         </div>
         <div id="main-header">
             <span id="profile-pic">
@@ -43,11 +35,6 @@ TODO resolve menu bar issue
         </div>
     </header>
     <div id="body">
-        <!-- this contains the main parts of web page, between header and footer -->
-
-        <!-- Floating Objects -->
-
-        <!-- -------------------- -->
         <div id="stationaries" class="category">
             <h2>Stationaries</h2>
             <span class="catalog-outer">
@@ -214,15 +201,22 @@ TODO resolve menu bar issue
         </div>
 
     </div>
-    <!-- <div class="black-bg" id="seperator">
-    </div> -->
     <footer>
-        <!-- Footer containing Contact Info, Privacy Policy -->
         <span id="quick-links" class="menu-bar-class">
             <ul>
-                <li><a href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Contact%20Regarding%20Product%20Referred%20From%20Website" target="_blank">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website" target="_blank" >Feedback/Report</a></li>
+                <li>
+                    <a class="invisible-btn"
+                        href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Contact%20Regarding%20Product%20Referred%20From%20Website"
+                        target="_blank">Contact Us</a>
+                </li>
+                <li>
+                    <a class="invisible-btn" href="#">About Us</a>
+                </li>
+                <li>
+                    <a class="invisible-btn"
+                        href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website"
+                        target="_blank">Feedback/Report</a>
+                </li>
             </ul>
         </span>
     </footer>
@@ -230,5 +224,3 @@ TODO resolve menu bar issue
 </body>
 
 </html>
-<!-- <a href="https://wa.me/7887977610/?text=urlencodedtext" class="wh">
-<button>Click me</button> -->
