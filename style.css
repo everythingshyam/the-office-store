@@ -1,23 +1,34 @@
+/*Nunito Sans Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;800&display=swap');
+
 :root {
-	--header: #4b88a2ff;
+	/* --header: #4b88a2ff;
 	--body: #fcecc9ff;
 	--content: #7c606bff;
 	--text: #fdf2fbff;
 	--footer: #1b264fff;
-	--dark: #171123;
-	--no-color: rgba(0, 0, 0, 0);
+	--dark: #171123; */
+	/* --no-color: rgba(0, 0, 0, 0); */
+
+	--primary-9: #a6b1e1;
+	--secondary-9: #454545;
+	--accent-9: #ef3054;
+	--text-bright-9: #ffeed6;
+	--text-dark-9: #2b2b2b;
+	/* --bg-dark-9: #424b54; */
 }
 
 * {
 	box-sizing: border-box;
-	transition: all ease-out 0.3s;
+	/* transition: all ease-out 0.3s; */
+	font-family: 'Nunito Sans', Courier, monospace;
 }
 ul > li {
 	list-style-type: none;
 }
 a {
 	text-decoration: none;
-	color: var(--text);
+	/* color: var(--text); */
 }
 
 img {
@@ -26,23 +37,23 @@ img {
 }
 
 .invisible-btn {
-	color: var(--text);
+	/* color: var(--text); */
 	padding: 5px 10px;
 	border-radius: 20px;
 }
 .invisible-btn:hover {
-	background-color: var(--text);
-	color: var(--dark);
+	/* background-color: var(--text); */
+	/* color: var(--dark); */
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
 body {
-	color: var(--dark);
-	background-color: #fcecc9ff;
+	/* color: var(--primary-9); */
+	background-color: var(--primary-9);
 	margin: 0px;
 	padding: 0px;
-	font-family: cursive;
+	/* font-family: cursive; */
 	box-sizing: border-box;
 }
 
@@ -89,7 +100,7 @@ header {
 
 #main-header {
 	display: flex;
-	color: #fdf2fbff;
+	/* color: #fdf2fbff; */
 	padding-top: 60px;
 }
 
@@ -147,14 +158,14 @@ header {
 	padding-right: 50px;
 	margin: 10px;
 	margin-left: 0px;
-	background-color: #26547c;
-	color: #fdf2fbff;
+	/* background-color: #26547c; */
+	/* color: #fdf2fbff; */
 	font-weight: 500;
 	border-radius: 0px 10px 10px 0px;
 }
 
 .catalog-inner {
-	background-color: #26547c;
+	/* background-color: #26547c; */
 	padding: 0 20px 0 20px;
 	margin: 10px;
 	width: 460px;
@@ -168,7 +179,7 @@ header {
 .catalog-inner > a {
 	text-align: center;
 	text-decoration: none;
-	color: #fdf2fbff;
+	/* color: #fdf2fbff; */
 }
 
 .catalog-inner > a > img {
@@ -179,8 +190,8 @@ header {
 footer {
 	margin: 0px;
 	padding: 10px;
-	background-color: #1b264fff;
-	color: #fdf2fbff;
+	/* background-color: #1b264fff; */
+	/* color: #fdf2fbff; */
 }
 
 #quick-links > ul {
