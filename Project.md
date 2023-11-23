@@ -3,4 +3,4 @@
 -   Add backend
 -   Add icon to website
 -   Redesign home page
--   Setup Landing Page
+-   ~~Setup Landing Page~~
