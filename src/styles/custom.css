@@ -22,4 +22,10 @@
 	.header-icon:hover {
 		@apply bg-gray-200;
 	}
+	.footer-heading{
+		@apply p-2 ;
+		@apply font-bold;
+		@apply hover:bg-primary-6;
+		@apply hover:text-secondary-8;
+	}
 }
