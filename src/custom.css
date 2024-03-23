@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+@layer base {
+	* {
+		@apply box-border;
+		/* border: 1px solid gray; */
+	}
+	body {
+		font-family: 'Nunito Sans', Courier, monospace;
+	}
+	.logo-text-bit {
+		@apply px-0.5;
+	}
+	.header-icon {
+		@apply p-2;
+		cursor: pointer;
+	}
+	.header-icon:hover {
+		@apply bg-gray-200;
+	}
+}
