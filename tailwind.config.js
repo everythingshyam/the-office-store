@@ -29,6 +29,14 @@ module.exports = {
 			minHeight: {
 				'10vh': '15vh',
 			},
+			screens:{
+				'lg': '1000px',
+				'md': '700px',
+				'sm': '530px',
+			},
+			dropShadow:{
+				'accent': ['0 10px 8px rgb(0 123 255 / 0.04)','0 4px 3px rgb(0 123 255 / 0.3)'],
+			},
 		},
 	},
 	plugins: [],
