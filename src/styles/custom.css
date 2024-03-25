@@ -7,9 +7,7 @@
 @layer base {
 	* {
 		@apply box-border;
-		@apply transition-all;
-		@apply ease-in-out;
-		@apply delay-75;
+		/* For Testing Purpose */
 		/* border: 1px solid gray; */
 	}
 	body {
@@ -17,21 +15,16 @@
 	}
 	.logo-text-bit {
 		@apply px-0.5;
+		@apply shadow-white;
 	}
 	.header-icon {
-		@apply p-2;
-		cursor: pointer;
+		@apply px-4;
+		@apply cursor-pointer;
+		@apply rounded-full;
+		@apply flex;
+		@apply items-center;
+		@apply hover:shadow-round;
 	}
-	.header-icon:hover {
-		@apply bg-gray-200;
-	}
-	/* .fun-look {
-		background-image: linear-gradient(to bottom, blue 50%, black 50%);
-		background-size: 200% 100%;
-		background-position: -50% 0;
-		-webkit-text-fill-color: transparent;
-		text-fill-color: transparent;
-	} */
 	.product-palette {
 		@apply p-4;
 		@apply bg-primary-6;
@@ -59,25 +52,21 @@
 		@apply shadow-primary-2;
 		@apply cursor-pointer;
 		@apply border-0;
-		@apply hover:border-2;
+		@apply hover:border-4;
 		@apply hover:border-primary-8;
 		@apply p-0;
 		@apply hover:shadow-lg;
-		/* @apply grid; */
-		/* grid-template-rows: 2fr 1fr; */
 	}
 	.product-img {
 		@apply shadow-md;
 		@apply shadow-primary-2;
 	}
 	.product-img img {
-		/* @apply w-full; */
 		@apply aspect-square;
-		/* @apply h-full; */
-		/* @apply object-cover; */
 	}
 	.product-meta {
 		@apply p-2;
+		@apply group-hover:border-0;
 		@apply border-2;
 		@apply border-primary-8;
 		@apply border-t-0;
@@ -125,10 +114,31 @@
 	.price-secondary > *:last-child {
 		@apply text-secondary-6;
 	}
-	.footer-heading {
+	.footer-sublist {
+		@apply m-auto;
+		@apply my-2;
+	}
+	.footer-sublist > ul {
+		@apply p-4;
+		@apply hidden;
+		@apply sm:flex;
+		@apply sm:flex-col;
+	}
+	.footer-sublist > ul > li {
 		@apply p-2;
-		@apply font-bold;
+		/* @apply font-semibold; */
 		@apply hover:bg-primary-6;
 		@apply hover:text-secondary-8;
+		@apply cursor-pointer;
+	}
+	.footer-heading {
+		@apply p-2;
+		@apply font-normal;
+		@apply sm:font-semibold;
+		@apply hover:bg-primary-6;
+		@apply hover:text-secondary-8;
+		@apply border-none;
+		@apply sm:border-b-2;
+		@apply border-primary-4;
 	}
 }

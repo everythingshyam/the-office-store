@@ -14,29 +14,32 @@
     <div>
         <!-- Header Section -->
         <header
-            class="z-40 flex justify-between border-b-2 border-accent-6 bg-primary-8 p-2 font-bold shadow-secondary-2 drop-shadow-2xl">
-            <div class="m=10 flex items-end text-2xl hover:cursor-pointer hover:drop-shadow-lg">
+            class="z-40 flex justify-between border-b-2 border-accent-6 bg-primary-8 p-2 py-3 font-bold shadow-secondary-2 drop-shadow-2xl sticky top-0">
+            <div class="m=10 flex items-end text-2xl cursor-pointer drop-shadow-sm">
                 <div class="logo-text-bit">The</div>
                 <div class="logo-text-bit text-accent-8">Office</div>
                 <div class="logo-text-bit">Store</div>
             </div>
-            <div class="flex">
+            <div class="hidden sm:flex">
                 <div class="header-icon"><img src="./src/icons/search.svg"></img></div>
                 <div class="header-icon"><img src="./src/icons/cart.svg"></img></div>
                 <div class="header-icon"><img src="./src/icons/user.svg"></img></div>
             </div>
         </header>
         <!-- Hero Section -->
-        <section class="z-30 m-0 h-50vh flex flex-col justify-around text-center overflow-hidden">
-            <div class="text-7xl font-bold text-primary-6 drop-shadow-accent">WORK IN PROGRESS</div>
+        <section class="z-30 m-0 flex h-50vh overflow-hidden">
+            <div
+                class="text-3xl font-bold text-primary-6 drop-shadow-accent fixed h-50vh text-center flex flex-col justify-center sm:text-5xl md:text-7xl w-dvw">
+                WORK IN PROGRESS
+            </div>
         </section>
         <!-- Primary Container -->
         <section class="z-40 border-t-2 border-accent-6 bg-primary-8 p-4 shadow-secondary-2 drop-shadow-2xl">
             <div class="product-palette">
-                <h1 class="font-semibold text-2xl mb-1 text-accent-8 pl-2">Recently Viewed</h1>
-                <hr class="p-2 border-accent-6">
+                <h1 class="mb-1 pl-2 text-2xl font-semibold text-accent-8">Recently Viewed</h1>
+                <hr class="border-accent-6 p-2">
                 <div class="products-card">
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -60,7 +63,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -84,7 +87,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -108,7 +111,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -132,7 +135,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -156,7 +159,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -180,7 +183,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -204,7 +207,7 @@
 
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card group">
                         <div class="product-img">
                             <img src="./db/product-images/product112.jpg" alt="">
                         </div>
@@ -234,22 +237,62 @@
     </div>
     <!-- Bottom Part -->
     <div>
-        <footer class="min-h-10vh content-center bg-secondary-6 p-10 text-primary-8">
-            <ul class="w-100% mx-10 flex justify-between">
-                <li>
+        <footer class="min-h-10vh bg-secondary-6 p-10 pb-4 text-primary-8 font-thin flex flex-col overflow-hidden">
+            <ul class="w-100% mx-4 md:mx-10 flex flex-col sm:flex-row justify-between text-sm">
+                <li class="footer-sublist">
                     <a class="footer-heading"
                         href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Contact%20Regarding%20Product%20Referred%20From%20Website"
-                        target="_blank">Contact Us</a>
+                        target="_blank">Heading 1</a>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
                 </li>
-                <li>
-                    <a class="footer-heading" href="#">About Us</a>
+                <li class="footer-sublist">
+                    <a class="footer-heading" href="#">Heading 2</a>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
                 </li>
-                <li>
+                <li class="footer-sublist">
                     <a class="footer-heading"
                         href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website"
-                        target="_blank">Feedback/Report</a>
+                        target="_blank">Heading 3</a>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+                <li class="footer-sublist">
+                    <a class="footer-heading"
+                        href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website"
+                        target="_blank">Heading 4</a>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+                <li class="footer-sublist">
+                    <a class="footer-heading"
+                        href="mailto:shyamsundar.tiwari20@pccoepune.org?subject=Feedback%20On%20Website%20Referred%20From%20Website"
+                        target="_blank">Heading 5</a>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
                 </li>
             </ul>
+            <div class="text-center border-t-1 pt-4 text-xs sm:text-sm">
+                Made with ❤️ by Shyam.
+                &copy;2024 The Office Store. All rights reserved.
+                <p>(Just a sample data, Obv it's open source, no copywrite intended.)</p>
+            </div>
         </footer>
     </div>
 </body>
