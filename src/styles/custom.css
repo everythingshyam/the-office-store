@@ -6,9 +6,7 @@
 /* Global Styles */
 @layer base {
 	* {
-		@apply box-border;
-		/* For Testing Purpose */
-		/* border: 1px solid gray; */
+		box-sizing: border-box;
 	}
 	body {
 		font-family: 'Nunito Sans', Courier, monospace;
@@ -115,30 +113,25 @@
 		@apply text-secondary-6;
 	}
 	.footer-sublist {
-		@apply m-auto;
-		@apply my-2;
-	}
-	.footer-sublist > ul {
-		@apply p-4;
-		@apply hidden;
-		@apply sm:flex;
-		@apply sm:flex-col;
-	}
-	.footer-sublist > ul > li {
-		@apply p-2;
-		/* @apply font-semibold; */
-		@apply hover:bg-primary-6;
-		@apply hover:text-secondary-8;
-		@apply cursor-pointer;
+		/* @apply my-2; */
+		@apply m-0;
+		@apply px-2;
 	}
 	.footer-heading {
-		@apply p-2;
+		@apply px-2;
 		@apply font-normal;
-		@apply sm:font-semibold;
-		@apply hover:bg-primary-6;
-		@apply hover:text-secondary-8;
-		@apply border-none;
-		@apply sm:border-b-2;
+		@apply text-lg;
+		@apply hover:font-bold;
 		@apply border-primary-4;
+	}
+	.footer-sublist > ul > li {
+		@apply m-2;
+	}
+	.footer-sublist > ul a {
+		@apply p-1;
+		@apply font-normal;
+		@apply inline;
+		@apply hover:font-bold;
+		@apply cursor-pointer;
 	}
 }

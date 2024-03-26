@@ -16,6 +16,8 @@
 
 ### Completed
 
+-   ~~Finished working on footer~~
+
 -   ~~@issue product-meta height~~
 
 -   ~~Setup Landing Page~~
