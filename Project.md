@@ -2,8 +2,6 @@
 
 ### In Progress
 
--   Add 'like' button to product cards
-
 ### To Start Working On
 
 -   Add 'product-notification' to product cards
@@ -15,6 +13,8 @@
 -   Add backend
 
 ### Completed
+
+-   ~~Add 'like' button to product cards~~
 
 -   ~~Finished working on footer~~
 

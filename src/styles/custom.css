@@ -55,11 +55,20 @@
 		@apply p-0;
 		@apply hover:shadow-lg;
 	}
-	.product-img {
-		@apply shadow-md;
-		@apply shadow-primary-2;
+	.product-top {
+		@apply relative;
 	}
-	.product-img img {
+	.product-like-btn {
+		@apply absolute;
+		@apply z-40;
+		@apply top-2;
+		@apply right-2;
+		@apply p-2;
+		@apply bg-translucent-8;
+		box-shadow: 0 0 40px 25px rgba(0, 0, 0, 0.09),
+			0 0 40px 10px rgba(0, 0, 0, 0.01);
+	}
+	.product-img {
 		@apply aspect-square;
 	}
 	.product-meta {
