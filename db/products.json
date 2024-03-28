@@ -1,0 +1,86 @@
+[
+    {
+        "id": 2,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product112.jpg",
+        "productName": "Product 2",
+        "manufacturerName": "Manufacturer 2",
+        "rating": 4.0,
+        "ratingCount": 20,
+        "price": 600,
+        "oldPrice": 800,
+        "countInStock": 20
+    },
+    {
+        "id": 3,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product113.jpg",
+        "productName": "Product 3",
+        "manufacturerName": "Manufacturer 3",
+        "rating": 3.5,
+        "ratingCount": 30,
+        "price": 700,
+        "oldPrice": 900,
+        "countInStock": 30
+    },
+    {
+        "id": 4,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product114.jpg",
+        "productName": "Product 4",
+        "manufacturerName": "Manufacturer 4",
+        "rating": 3.0,
+        "ratingCount": 40,
+        "price": 800,
+        "oldPrice": 1000,
+        "countInStock": 40
+    },
+    {
+        "id": 5,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product115.jpg",
+        "productName": "Product 5",
+        "manufacturerName": "Manufacturer 5",
+        "rating": 2.5,
+        "ratingCount": 50,
+        "price": 900,
+        "oldPrice": 1100,
+        "countInStock": 50
+    },
+    {
+        "id": 6,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product116.jpg",
+        "productName": "Product 6",
+        "manufacturerName": "Manufacturer 6",
+        "rating": 2.0,
+        "ratingCount": 60,
+        "price": 1000,
+        "oldPrice": 1200,
+        "countInStock": 60
+    },
+    {
+        "id": 7,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product117.jpg",
+        "productName": "Product 7",
+        "manufacturerName": "Manufacturer 7",
+        "rating": 1.5,
+        "ratingCount": 70,
+        "price": 1100,
+        "oldPrice": 1300,
+        "countInStock": 70
+    },
+    {
+        "id": 8,
+        "isLiked": false,
+        "imageURL": "./db/product-images/product118.jpg",
+        "productName": "Product 8",
+        "manufacturerName": "Manufacturer 8",
+        "rating": 1.0,
+        "ratingCount": 80,
+        "price": 1200,
+        "oldPrice": 1400,
+        "countInStock": 80
+    }
+]
