@@ -2,7 +2,7 @@ const productsCard = document.querySelector('.products-card');
 
 // FETCHING PRODUCTS FROM JSON FILE
 let products = [];
-fetch('https://everythingshyam.github.io/the-office-store/db/products.json')
+fetch('https://everythingshyam.github.io/the-office-store/products.json')
 	.then((response) => response.json())
 	.then((data) => {
 		products = data;
