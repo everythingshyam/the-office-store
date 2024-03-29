@@ -102,6 +102,12 @@
 		@apply text-lg;
 		@apply font-bold;
 	}
+	.product-footer {
+		@apply flex;
+		@apply justify-between;
+		@apply items-stretch;
+		@apply pr-2;
+	}
 	.price-primary {
 		@apply text-secondary-8;
 		@apply font-bold;
@@ -121,6 +127,35 @@
 	.price-secondary > *:last-child {
 		@apply text-secondary-6;
 	}
+	.product-action > div {
+		@apply grid;
+		@apply grid-cols-3;
+		/* @apply gap-1; */
+		@apply border-2;
+		@apply border-primary-8;
+		@apply hover:border-accent-8;
+		@apply rounded-3xl;
+		@apply overflow-hidden;
+	}
+	.product-action > div > * {
+		@apply cursor-pointer;
+		@apply bg-primary-6;
+		@apply p-2;
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply text-xl;
+	}
+
+	.product-action > div > *:nth-child(2) {
+		@apply px-0;
+	}
+
+	.action-button {
+		@apply hover:bg-accent-8;
+		@apply hover:text-primary-8;
+	}
+
 	.footer-sublist {
 		/* @apply my-2; */
 		@apply m-0;
