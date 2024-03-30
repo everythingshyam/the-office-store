@@ -2,7 +2,7 @@ const productsCard = document.querySelector('.products-card');
 
 // FETCHING PRODUCTS FROM JSON FILE
 let products = [];
-fetch('https://everythingshyam.github.io/the-office-store/products.json')
+fetch('./products.json')
 	.then((response) => response.json())
 	.then((data) => {
 		products = data;
@@ -53,7 +53,7 @@ fetch('https://everythingshyam.github.io/the-office-store/products.json')
 								<div class="decrease-count action-button">
 									<img src="./src/icons/decrease-from-cart.svg" alt="">
 								</div>
-								<div class="count action-button">0</div>
+								<div class="product-count action-button">0</div>
 								<div class="increase-count action-button">
 									<img src="./src/icons/increase-to-cart.svg" alt="">
 								</div>
@@ -83,6 +83,7 @@ fetch('https://everythingshyam.github.io/the-office-store/products.json')
 		});
 
 		const decreaseButtons = document.querySelectorAll('.decrease-count');
+		const productCounts = document.querySelectorAll('.product-count');
 		const increaseButtons = document.querySelectorAll('.increase-count');
 
 		decreaseButtons.forEach((button) => {
@@ -103,6 +104,12 @@ fetch('https://everythingshyam.github.io/the-office-store/products.json')
 				if (count.innerHTML > 0) {
 					count.innerHTML = parseInt(count.innerHTML) - 1;
 				}
+			});
+		});
+
+		productCounts.forEach((count) => {
+			count.addEventListener('click', () => {
+				count.innerHTML = 0;
 			});
 		});
 
