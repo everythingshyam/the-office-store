@@ -22,6 +22,12 @@ module.exports = {
 					6: '#E9EBEE',
 					8: '#F8F8F8',
 				},
+				attention: {
+					2: '#E9B0B0',
+					4: '#E28585',
+					6: '#DA5A5A',
+					8: '#D32F2F',
+				},
 				translucent: {
 					0: 'rgba(255,255,255,0.01)',
 					8: 'rgba(0,0,0,0.09)',

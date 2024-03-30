@@ -1,7 +1,38 @@
 const productsCard = document.querySelector('.products-card');
+const cartStatus = document.querySelector('#cart-status');
+const cartButton = document.querySelector('#cart-button');
 
-// FETCHING PRODUCTS FROM JSON FILE
+let cart = {};
 let products = [];
+
+function updateCartStatus(){
+	if(Object.keys(cart).length==0 && cartStatus.classList.contains('cart-filled')){
+		cartStatus.classList.remove('cart-filled');
+	}
+	else if(Object.keys(cart).length!=0 && !cartStatus.classList.contains('cart-filled')){
+		cartStatus.classList.add('cart-filled');
+	}
+}
+
+function updateCartTitle() {
+	let cartTitleText = '';
+	if (Object.keys(cart).length === 0) {
+		cartTitleText = 'Cart is Empty';
+	} else {
+		let totalPrice = 0;
+		let totalCount = 0;
+		for (let key in cart) {
+			let product = products.find((product) => product.id == key);
+			const productTotalPrice = product.price * cart[key];
+			cartTitleText += `\n${product.productName} x ${cart[key]} = ₹ ${productTotalPrice}`;
+			totalPrice += productTotalPrice;
+			totalCount += cart[key];
+		}
+		cartTitleText += `\nTotal = ₹ ${totalPrice} for ${totalCount} items`;
+	}
+	cartButton.setAttribute('title', cartTitleText);
+}
+
 fetch('./products.json')
 	.then((response) => response.json())
 	.then((data) => {
@@ -104,6 +135,15 @@ fetch('./products.json')
 				if (count.innerHTML > 0) {
 					count.innerHTML = parseInt(count.innerHTML) - 1;
 				}
+				const id=button.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+				if(cart[id]>1){
+					cart[id]--;
+				}
+				else if(cart[id]==1){
+					delete cart[id];
+				}
+				updateCartStatus();
+				updateCartTitle();
 			});
 		});
 
@@ -111,6 +151,12 @@ fetch('./products.json')
 			count.addEventListener('click', () => {
 				count.innerHTML = 0;
 			});
+			let id=count.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+			if(cart[id]>0){
+				delete cart[id];
+			}
+			updateCartStatus();
+			updateCartTitle();
 		});
 
 		increaseButtons.forEach((button) => {
@@ -129,7 +175,18 @@ fetch('./products.json')
 			button.addEventListener('click', () => {
 				const count = button.previousElementSibling;
 				count.innerHTML = parseInt(count.innerHTML) + 1;
+				const id=button.parentElement.parentElement.parentElement.parentElement.parentElement.id;
+				if(cart[id]>0){
+					cart[id]++;
+				}
+				else{
+					cart[id]=1;
+				}
+				updateCartStatus();
+				updateCartTitle();
 			});
 		});
+
+
 		// ==========================
 	});

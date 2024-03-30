@@ -476,6 +476,16 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.cart-filled{
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 47 47 / var(--tw-bg-opacity));
+  border-radius: 9999px;
+  padding: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
 .product-palette{
   padding: 1rem;
   --tw-bg-opacity: 1;

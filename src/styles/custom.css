@@ -23,6 +23,13 @@
 		@apply items-center;
 		@apply hover:shadow-round;
 	}
+	.cart-filled{
+		@apply text-xs;
+		@apply bg-attention-8;
+		@apply rounded-full;
+		@apply p-1;
+		@apply mb-3;
+	}
 	.product-palette {
 		@apply p-4;
 		@apply bg-primary-6;
