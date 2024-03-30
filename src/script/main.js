@@ -5,11 +5,16 @@ const cartButton = document.querySelector('#cart-button');
 let cart = {};
 let products = [];
 
-function updateCartStatus(){
-	if(Object.keys(cart).length==0 && cartStatus.classList.contains('cart-filled')){
+function updateCartStatus() {
+	if (
+		Object.keys(cart).length == 0 &&
+		cartStatus.classList.contains('cart-filled')
+	) {
 		cartStatus.classList.remove('cart-filled');
-	}
-	else if(Object.keys(cart).length!=0 && !cartStatus.classList.contains('cart-filled')){
+	} else if (
+		Object.keys(cart).length != 0 &&
+		!cartStatus.classList.contains('cart-filled')
+	) {
 		cartStatus.classList.add('cart-filled');
 	}
 }
@@ -135,11 +140,12 @@ fetch('./products.json')
 				if (count.innerHTML > 0) {
 					count.innerHTML = parseInt(count.innerHTML) - 1;
 				}
-				const id=button.parentElement.parentElement.parentElement.parentElement.parentElement.id;
-				if(cart[id]>1){
+				const id =
+					button.parentElement.parentElement.parentElement
+						.parentElement.parentElement.id;
+				if (cart[id] > 1) {
 					cart[id]--;
-				}
-				else if(cart[id]==1){
+				} else if (cart[id] == 1) {
 					delete cart[id];
 				}
 				updateCartStatus();
@@ -149,14 +155,16 @@ fetch('./products.json')
 
 		productCounts.forEach((count) => {
 			count.addEventListener('click', () => {
+				let id =
+					count.parentElement.parentElement.parentElement
+						.parentElement.parentElement.id;
+				if (cart[id] > 0) {
+					delete cart[id];
+				}
 				count.innerHTML = 0;
+				updateCartStatus();
+				updateCartTitle();
 			});
-			let id=count.parentElement.parentElement.parentElement.parentElement.parentElement.id;
-			if(cart[id]>0){
-				delete cart[id];
-			}
-			updateCartStatus();
-			updateCartTitle();
 		});
 
 		increaseButtons.forEach((button) => {
@@ -175,18 +183,18 @@ fetch('./products.json')
 			button.addEventListener('click', () => {
 				const count = button.previousElementSibling;
 				count.innerHTML = parseInt(count.innerHTML) + 1;
-				const id=button.parentElement.parentElement.parentElement.parentElement.parentElement.id;
-				if(cart[id]>0){
+				const id =
+					button.parentElement.parentElement.parentElement
+						.parentElement.parentElement.id;
+				if (cart[id] > 0) {
 					cart[id]++;
-				}
-				else{
-					cart[id]=1;
+				} else {
+					cart[id] = 1;
 				}
 				updateCartStatus();
 				updateCartTitle();
 			});
 		});
-
 
 		// ==========================
 	});
