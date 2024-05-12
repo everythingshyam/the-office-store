@@ -2,9 +2,11 @@
 
 ### In Progress
 
--   Viewing Cart and Checking Out
+-   Adding more sections to the landing page
 
 ### To Start Working On
+
+-   Viewing Cart and Checking Out
 
 -   Add 'product-notification' to product cards
 
@@ -13,6 +15,8 @@
 -   Add backend
 
 ### Completed
+
+-   ~~Updated UI to be more compact~~
 
 -   ~~Adding to cart js functionalities~~
 

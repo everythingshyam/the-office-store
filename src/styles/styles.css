@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;800&display=swap');
 
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -213,6 +213,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -236,9 +238,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -507,24 +509,24 @@ body {
 
 .products-card{
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (min-width: 530px){
-  .products-card{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 750px){
   .products-card{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1000px){
+@media (min-width: 750px){
   .products-card{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px){
+  .products-card{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -560,6 +562,9 @@ body {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .product-top{
@@ -602,7 +607,7 @@ body {
   height: max-content;
   --tw-bg-opacity: 1;
   background-color: rgb(233 235 238 / var(--tw-bg-opacity));
-  min-height: 9rem;
+  min-height: 8rem;
   display: flex;
   flex-direction: column;
 }
@@ -616,8 +621,8 @@ body {
 .rating-info{
   display: flex;
   justify-content: space-between;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .rating-info > *{
@@ -625,10 +630,15 @@ body {
   display: flex;
 }
 
-.product-meta h3{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.product-meta .product-name{
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
+}
+
+.product-meta .manufacturer-name{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .product-footer{
@@ -648,8 +658,8 @@ body {
 
 .price-secondary{
   display: flex;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .price-secondary > *{
@@ -670,8 +680,7 @@ body {
 
 .product-action > div{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  /* @apply gap-1; */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(248 248 248 / var(--tw-border-opacity));
@@ -685,34 +694,53 @@ body {
 .product-action > div{
   border-radius: 1.5rem;
   overflow: hidden;
+  /* @apply h-8; */
 }
 
 .product-action > div > *{
   cursor: pointer;
   --tw-bg-opacity: 1;
   background-color: rgb(233 235 238 / var(--tw-bg-opacity));
-  padding: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
 .product-action > div > *:nth-child(2){
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0px;
+}
+
+.product-action>div>*:nth-child(odd)>img{
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 .action-button:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(248 248 248 / var(--tw-text-opacity));
+  color: rgb(0 123 255 / var(--tw-text-opacity));
 }
 
-.footer-sublist {
-  /* @apply my-2; */
+/* ------------------------------------------------------------------------- */
+
+.bottom-nav{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #CAD1DA;
+  --tw-shadow: var(--tw-shadow-colored);
+  z-index: 50;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.footer-sublist{
   margin: 0px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -801,6 +829,10 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -851,6 +883,10 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .visible{
@@ -863,6 +899,10 @@ body {
 
 .collapse{
   visibility: collapse;
+}
+
+.fixed{
+  position: fixed;
 }
 
 .absolute{
@@ -929,7 +969,19 @@ body {
   display: none;
 }
 
-.h-50vh{
+.aspect-auto{
+  aspect-ratio: auto;
+}
+
+.aspect-video{
+  aspect-ratio: 16 / 9;
+}
+
+.h-30dvh{
+  height: 30dvh;
+}
+
+.h-50dvh{
   height: 50dvh;
 }
 
@@ -943,6 +995,10 @@ body {
 
 .w-dvw{
   width: 100dvw;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .border-collapse{
@@ -1220,6 +1276,14 @@ body {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /* Global Styles */
 
 @media (min-width: 530px){
@@ -1243,6 +1307,10 @@ body {
 }
 
 @media (min-width: 750px){
+  .md\:h-50dvh{
+    height: 50dvh;
+  }
+
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

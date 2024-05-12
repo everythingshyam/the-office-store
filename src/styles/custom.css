@@ -23,7 +23,7 @@
 		@apply items-center;
 		@apply hover:shadow-round;
 	}
-	.cart-filled{
+	.cart-filled {
 		@apply text-xs;
 		@apply bg-attention-8;
 		@apply rounded-full;
@@ -43,10 +43,10 @@
 	}
 	.products-card {
 		@apply grid;
-		@apply grid-cols-1;
-		@apply sm:grid-cols-2;
-		@apply md:grid-cols-3;
-		@apply lg:grid-cols-4;
+		@apply grid-cols-2;
+		@apply sm:grid-cols-3;
+		@apply md:grid-cols-4;
+		@apply lg:grid-cols-5;
 		@apply gap-4;
 	}
 	.product-card {
@@ -61,6 +61,7 @@
 		@apply hover:border-primary-8;
 		@apply p-0;
 		@apply hover:shadow-lg;
+		@apply hover:transition-all;
 	}
 	.product-top {
 		@apply relative;
@@ -89,7 +90,7 @@
 		@apply m-0;
 		@apply h-max;
 		@apply bg-primary-6;
-		@apply min-h-36;
+		@apply min-h-32;
 		@apply flex;
 		@apply flex-col;
 	}
@@ -99,15 +100,19 @@
 	.rating-info {
 		@apply flex;
 		@apply justify-between;
-		@apply text-sm;
+		@apply text-xs;
 	}
 	.rating-info > * {
 		@apply p-0.5;
 		@apply flex;
 	}
-	.product-meta h3 {
-		@apply text-lg;
+	.product-meta .product-name {
+		@apply text-base;
 		@apply font-bold;
+		
+	}
+	.product-meta .manufacturer-name {
+		@apply text-xs;
 	}
 	.product-footer {
 		@apply flex;
@@ -122,7 +127,7 @@
 	}
 	.price-secondary {
 		@apply flex;
-		@apply text-sm;
+		@apply text-xs;
 	}
 	.price-secondary > * {
 		@apply px-0.5;
@@ -136,35 +141,46 @@
 	}
 	.product-action > div {
 		@apply grid;
-		@apply grid-cols-3;
-		/* @apply gap-1; */
+		@apply grid-cols-2;
 		@apply border-2;
 		@apply border-primary-8;
 		@apply hover:border-accent-8;
 		@apply rounded-3xl;
 		@apply overflow-hidden;
+		/* @apply h-8; */
 	}
 	.product-action > div > * {
 		@apply cursor-pointer;
 		@apply bg-primary-6;
-		@apply p-2;
+		@apply px-1;
 		@apply flex;
 		@apply justify-center;
 		@apply items-center;
-		@apply text-xl;
+		@apply text-lg;
 	}
 
 	.product-action > div > *:nth-child(2) {
-		@apply px-0;
+		@apply p-0;
+	}
+
+	.product-action>div>*:nth-child(odd)>img{
+		max-height: fit-content;
 	}
 
 	.action-button {
-		@apply hover:bg-accent-8;
-		@apply hover:text-primary-8;
+		@apply hover:text-accent-8;
 	}
-
+/* ------------------------------------------------------------------------- */
+	.bottom-nav{
+		@apply fixed;
+		@apply bottom-0;
+		@apply w-full;
+		@apply shadow-sm;
+		@apply shadow-primary-2;
+		@apply z-50;
+	}
+/* ------------------------------------------------------------------------- */
 	.footer-sublist {
-		/* @apply my-2; */
 		@apply m-0;
 		@apply px-2;
 	}

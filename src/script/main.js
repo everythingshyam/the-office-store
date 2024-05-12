@@ -64,8 +64,8 @@ fetch('./products.json')
 						</div>
 						<div>(${product.ratingCount})</div>
 					</div>
-					<h3 class="long-text">${product.productName}</h3>
-					<div class="long-text">${product.manufacturerName}</div>
+					<h3 class="long-text product-name">${product.productName}</h3>
+					<div class="long-text manufacturer-name">${product.manufacturerName}</div>
 					<div class="product-footer">
 						<div class="price-info">
 							<div class="price-primary">₹ ${product.price}</div>
@@ -86,9 +86,6 @@ fetch('./products.json')
 						</div>
 						<div class="product-action">
                             <div>
-								<div class="decrease-count action-button">
-									<img src="./src/icons/decrease-from-cart.svg" alt="">
-								</div>
 								<div class="product-count action-button">0</div>
 								<div class="increase-count action-button">
 									<img src="./src/icons/increase-to-cart.svg" alt="">
