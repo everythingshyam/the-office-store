@@ -10,6 +10,12 @@
 	}
 	body {
 		font-family: 'Nunito Sans', Courier, monospace;
+		font-size: 18px;
+	}
+	@media (max-width: 767px) {
+		body {
+			font-size: 14px;
+		}
 	}
 	.logo-text-bit {
 		@apply px-0.5;
@@ -24,7 +30,7 @@
 		@apply hover:shadow-round;
 	}
 	.cart-filled {
-		@apply text-xs;
+		@apply text-base;
 		@apply bg-attention-8;
 		@apply rounded-full;
 		@apply p-1;
@@ -109,7 +115,6 @@
 	.product-meta .product-name {
 		@apply text-base;
 		@apply font-bold;
-		
 	}
 	.product-meta .manufacturer-name {
 		@apply text-xs;
@@ -123,7 +128,7 @@
 	.price-primary {
 		@apply text-secondary-8;
 		@apply font-bold;
-		@apply text-xl;
+		@apply text-base;
 	}
 	.price-secondary {
 		@apply flex;
@@ -163,15 +168,15 @@
 		@apply p-0;
 	}
 
-	.product-action>div>*:nth-child(odd)>img{
+	.product-action > div > *:nth-child(odd) > img {
 		max-height: fit-content;
 	}
 
 	.action-button {
 		@apply hover:text-accent-8;
 	}
-/* ------------------------------------------------------------------------- */
-	.bottom-nav{
+	/* ------------------------------------------------------------------------- */
+	.bottom-nav {
 		@apply fixed;
 		@apply bottom-0;
 		@apply w-full;
@@ -179,7 +184,7 @@
 		@apply shadow-primary-2;
 		@apply z-50;
 	}
-/* ------------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------------- */
 	.footer-sublist {
 		@apply m-0;
 		@apply px-2;
@@ -187,12 +192,13 @@
 	.footer-heading {
 		@apply px-2;
 		@apply font-normal;
-		@apply text-lg;
+		@apply text-base;
 		@apply hover:font-bold;
 		@apply border-primary-4;
 	}
 	.footer-sublist > ul > li {
 		@apply m-2;
+		@apply text-sm;
 	}
 	.footer-sublist > ul a {
 		@apply p-1;

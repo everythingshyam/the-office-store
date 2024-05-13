@@ -2,9 +2,11 @@
 
 ### In Progress
 
--   Adding more sections to the landing page
+-   Updated UI to be more compact
 
 ### To Start Working On
+
+-   Adding more sections to the landing page
 
 -   Viewing Cart and Checking Out
 
@@ -15,8 +17,6 @@
 -   Add backend
 
 ### Completed
-
--   ~~Updated UI to be more compact~~
 
 -   ~~Adding to cart js functionalities~~
 
