@@ -577,6 +577,24 @@ body {
   position: relative;
 }
 
+.product-highlight{
+  position: absolute;
+  z-index: 40;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 123 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(248 248 248 / var(--tw-text-opacity));
+  border-radius: 1.5rem;
+  font-size: .75em;
+  font-weight: 700;
+}
+
 .product-like-btn{
   position: absolute;
   z-index: 40;
@@ -613,7 +631,16 @@ body {
   height: max-content;
   --tw-bg-opacity: 1;
   background-color: rgb(233 235 238 / var(--tw-bg-opacity));
-  min-height: 8rem;
+  min-height: 7rem;
+}
+
+@media (min-width: 1000px){
+  .product-meta{
+    min-height: 8rem;
+  }
+}
+
+.product-meta{
   display: flex;
   flex-direction: column;
 }
@@ -695,15 +722,15 @@ body {
 .product-action > div{
   border-radius: 1.5rem;
   overflow: hidden;
-  /* @apply h-8; */
 }
 
 .product-action > div > *{
   cursor: pointer;
   --tw-bg-opacity: 1;
   background-color: rgb(233 235 238 / var(--tw-bg-opacity));
-  padding-left: 0.25rem;
   padding-right: 0.25rem;
+  padding-left: .5rem;
+  padding-top: .2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1137,6 +1164,11 @@ body {
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .py-2{

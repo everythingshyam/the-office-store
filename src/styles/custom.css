@@ -72,6 +72,19 @@
 	.product-top {
 		@apply relative;
 	}
+	.product-highlight{
+		@apply absolute;
+		@apply z-40;
+		@apply top-2;
+		@apply left-2;
+		@apply px-2;
+		@apply py-0.5;
+		@apply bg-accent-8;
+		@apply text-primary-8;
+		@apply rounded-3xl;
+		@apply text-xs;
+		@apply font-bold;
+	}
 	.product-like-btn {
 		@apply absolute;
 		@apply z-40;
@@ -96,7 +109,8 @@
 		@apply m-0;
 		@apply h-max;
 		@apply bg-primary-6;
-		@apply min-h-32;
+		@apply min-h-28;
+		@apply lg:min-h-32;
 		@apply flex;
 		@apply flex-col;
 	}
@@ -152,12 +166,13 @@
 		@apply hover:border-accent-8;
 		@apply rounded-3xl;
 		@apply overflow-hidden;
-		/* @apply h-8; */
 	}
 	.product-action > div > * {
 		@apply cursor-pointer;
 		@apply bg-primary-6;
 		@apply px-1;
+		padding-left: .5rem;
+		padding-top: .2rem;
 		@apply flex;
 		@apply justify-center;
 		@apply items-center;

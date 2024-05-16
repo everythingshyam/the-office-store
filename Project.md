@@ -2,7 +2,7 @@
 
 ### In Progress
 
--   Updated UI to be more compact
+-   The Hero Section
 
 ### To Start Working On
 
@@ -17,6 +17,9 @@
 -   Add backend
 
 ### Completed
+
+-   ~~Update UI to be more compact~~
+--- ~~Product-Meta Height more than required on mobile view~~
 
 -   ~~Adding to cart js functionalities~~
 

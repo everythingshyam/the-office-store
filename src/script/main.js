@@ -52,8 +52,10 @@ fetch('./products.json')
 					? './src/icons/heart_filled.svg'
 					: './src/icons/heart_empty.svg';
 			let insideHTML = `
-				<div class="product-top">
-					<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
+				<div class="product-top">`;
+			if(product.highlightText!="")
+				insideHTML+=`<div class="product-highlight">${product.highlightText}</div>`;
+					insideHTML+=`<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
 					<img class="product-img" src="${product.imageURL}" alt="">
 				</div>
 				<div class="product-meta">
