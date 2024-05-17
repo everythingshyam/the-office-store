@@ -9,18 +9,17 @@
     <title>The Office Store - Stationary and Office Products</title>
 </head>
 
-<body class="flex min-h-dvh flex-col justify-between bg-primary-6 text-secondary-8">
+<body>
     <!-- Top Part -->
     <div>
         <!-- Header Section -->
-        <header
-            class="sticky top-0 z-50 flex justify-between border-b-2 border-accent-6 bg-primary-8 p-2 py-2 font-bold shadow-secondary-2 drop-shadow-2xl">
-            <div class="m=10 flex cursor-pointer items-end text-2xl drop-shadow-sm">
+        <header>
+            <div class="top-logo">
                 <div class="logo-text-bit">The</div>
                 <div class="logo-text-bit text-accent-8">Office</div>
                 <div class="logo-text-bit">Store</div>
             </div>
-            <div class="hidden sm:flex">
+            <div class="header-icons">
                 <div class="header-icon"><img src="./src/icons/search.svg"></img></div>
                 <div class="header-icon" id="cart-button" title="Cart is empty"><img src="./src/icons/cart.svg"></img>
                     <sup id="cart-status"></sup>
@@ -29,17 +28,20 @@
             </div>
         </header>
         <!-- Hero Section -->
-        <section class="z-20 m-0 flex h-30dvh md:h-50dvh overflow-hidden">
-            <div
+        <section class="hero-section">
+            <!-- <div
                 class="flex w-full flex-col justify-center text-center text-3xl font-bold text-primary-6 drop-shadow-accent sm:text-5xl md:text-6xl">
                 WORK IN PROGRESS
-            </div>
+            </div> -->
+            <div class="slideshow-container">
+            <img src="./db/banners/TheOfficeStoreSaleBanner.png" alt="Summer Sale Banner">
+        </div>
         </section>
-        <!-- Primary Container -->
-        <section class="z-40 border-t-2 border-accent-6 bg-primary-8 p-4 shadow-secondary-2 drop-shadow-2xl">
+        <!-- Main Container -->
+        <section class="main-container">
             <div class="product-palette">
-                <h1 class="mb-1 pl-2 text-xl font-semibold text-accent-8">Recently Viewed</h1>
-                <hr class="border-accent-6 p-2">
+                <h1>Recently Viewed</h1>
+                <hr>
                 <div class="products-card">
                 </div>
             </div>
@@ -53,9 +55,8 @@
     </div>
     <!-- Bottom Part -->
     <div>
-        <footer class="z-40 flex min-h-10vh flex-col overflow-hidden bg-secondary-6 p-10 pb-4 font-thin text-primary-8">
-            <ul
-                class="w-100% grid grid-cols-1 justify-evenly gap-3 text-sm sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pb-4">
+        <footer>
+            <ul>
                 <li class="footer-sublist">
                     <a class="footer-heading" href="#" target="_blank">The Office Store</a>
                     <ul>
@@ -101,7 +102,7 @@
                 </li>
 
             </ul>
-            <div class="border-t-1 pt-4 text-center text-xs">
+            <div class="footer-text">
                 <div>Made with ❤️ by Shyam. 2024. The Office Store.</div>
                 <div>Visit my <strong><a href="https://github.com/everythingshyam" target="_blank"
                             rel="noopener noreferrer">GitHub Profile (@everythingshyam)</a></strong> for more.</div>

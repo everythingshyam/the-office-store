@@ -2,11 +2,11 @@
 
 ### In Progress
 
--   The Hero Section
+-   Adding more sections to the landing page
 
 ### To Start Working On
 
--   Adding more sections to the landing page
+-   The Hero Section (slideshow part)
 
 -   Viewing Cart and Checking Out
 
