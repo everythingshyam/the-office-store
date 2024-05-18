@@ -65,6 +65,10 @@ module.exports = {
 					'0 10px 8px rgb(0 123 255 / 0.04)',
 					'0 4px 3px rgb(0 123 255 / 0.3)',
 				],
+				secondary: [
+					'0 10px 8px rgb(0 0 0 / 0.04)',
+					'0 4px 3px rgb(0 0 0 / 0.3)',
+				],
 			},
 			borderWidth: {
 				1: '1px',

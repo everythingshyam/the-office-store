@@ -10,13 +10,13 @@
 
 -   Viewing Cart and Checking Out
 
--   Add 'product-notification' to product cards
-
 -   Add icon to website
 
 -   Add backend
 
 ### Completed
+
+-   ~~Add 'product-notification' to product cards~~
 
 -   ~~Update UI to be more compact~~
 --- ~~Product-Meta Height more than required on mobile view~~

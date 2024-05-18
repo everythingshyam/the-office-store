@@ -10,7 +10,7 @@
 	}
 
 	body {
-		font-family: 'Nunito Sans', Courier, monospace;
+		font-family: 'Nunito Sans', Cambria, Georgia, Courier, monospace;
 		font-size: 18px;
 		@apply flex;
 		@apply min-h-dvh;
@@ -30,56 +30,55 @@
 		@apply sticky;
 		@apply top-0;
 		@apply z-50;
+
 		@apply flex;
 		@apply justify-between;
+		@apply py-1;
+		@apply justify-around;
+		@apply sm:justify-between;
+
+		@apply font-bold;
+
 		@apply border-b-2;
 		@apply border-accent-6;
-		@apply bg-primary-8;
-		@apply p-2;
-		@apply py-2;
-		@apply font-bold;
-		@apply shadow-secondary-2;
-		@apply drop-shadow-2xl;
-		@apply sticky;
-		@apply top-0;
-		@apply z-50;
-		@apply flex;
-		@apply justify-between;
-		@apply border-b-2;
-		@apply border-accent-6;
-		@apply bg-primary-8;
-		@apply p-2;
-		@apply py-2;
-		@apply font-bold;
+		@apply bg-primary-6;
 		@apply shadow-secondary-2;
 		@apply drop-shadow-2xl;
 	}
 
 	.top-logo {
-		@apply m-0.5;
 		@apply flex;
-		@apply cursor-pointer;
-		@apply items-end;
+		@apply ml-1;
+		@apply items-center;
+
 		@apply text-2xl;
 		@apply drop-shadow-sm;
+
+		@apply cursor-pointer;
 	}
 
 	.logo-text-bit {
 		@apply px-0.5;
 		@apply shadow-white;
+		@apply text-sm;
 	}
 
 	.header-icons {
 		@apply hidden;
 		@apply sm:flex;
+		@apply mr-2;
 	}
 
 	.header-icon {
-		@apply px-4;
-		@apply cursor-pointer;
-		@apply rounded-full;
 		@apply flex;
 		@apply items-center;
+	}
+
+	.header-icon > img {
+		@apply p-2;
+		@apply mx-0.5;
+		@apply cursor-pointer;
+		@apply rounded-full;
 		@apply hover:shadow-round;
 	}
 
@@ -88,7 +87,8 @@
 		@apply bg-attention-8;
 		@apply rounded-full;
 		@apply p-1;
-		@apply mb-3;
+		@apply relative;
+		left: -8px;
 	}
 
 	.hero-section {
@@ -116,7 +116,7 @@
 		@apply z-40;
 		@apply border-t-2;
 		@apply border-accent-6;
-		@apply bg-primary-8;
+		@apply bg-primary-6;
 		@apply p-4;
 		@apply shadow-secondary-2;
 		@apply drop-shadow-2xl;
@@ -124,7 +124,7 @@
 
 	.product-palette {
 		@apply p-4;
-		@apply bg-primary-6;
+		@apply bg-primary-4;
 		@apply rounded-2xl;
 		@apply shadow-sm;
 		@apply shadow-secondary-4;
@@ -164,7 +164,7 @@
 		@apply shadow-primary-2;
 		@apply cursor-pointer;
 		@apply border-0;
-		@apply hover:border-4;
+		/* @apply hover:border-4; */
 		@apply hover:border-primary-8;
 		@apply p-0;
 		@apply hover:shadow-lg;
@@ -204,19 +204,24 @@
 		@apply aspect-square;
 	}
 
-	.product-meta {
+	.product-bottom {
+		@apply flex;
+		@apply flex-col;
+		/* @apply min-h-28;
+		@apply lg:min-h-32; */
+		@apply h-max;
 		@apply p-2;
-		@apply group-hover:border-0;
+		@apply m-0;
 		@apply border-2;
-		@apply border-primary-8;
 		@apply border-t-0;
 		@apply rounded-2xl;
 		@apply rounded-t-none;
-		@apply m-0;
-		@apply h-max;
+		@apply group-hover:border-0;
 		@apply bg-primary-6;
-		@apply min-h-28;
-		@apply lg:min-h-32;
+		@apply border-primary-8;
+	}
+
+	.product-meta {
 		@apply flex;
 		@apply flex-col;
 	}
@@ -236,12 +241,12 @@
 		@apply flex;
 	}
 
-	.product-meta .product-name {
+	.product-name {
 		@apply text-base;
 		@apply font-bold;
 	}
 
-	.product-meta .manufacturer-name {
+	.manufacturer-name {
 		@apply text-xs;
 	}
 
@@ -249,7 +254,19 @@
 		@apply flex;
 		@apply justify-between;
 		@apply items-stretch;
-		@apply pr-2;
+		/* @apply pr-2; */
+	}
+
+	/* ========== */
+
+	.price-info {
+		@apply w-full;
+		@apply flex;
+		@apply justify-between;
+	}
+
+	.price-info div {
+		@apply self-center;
 	}
 
 	.price-primary {
@@ -276,38 +293,25 @@
 		@apply text-secondary-6;
 	}
 
+	/* ========== */
+
+	.product-action {
+		@apply mt-1;
+	}
+
 	.product-action > div {
-		@apply grid;
-		@apply grid-cols-2;
 		@apply border-2;
 		@apply border-primary-8;
-		@apply hover:border-accent-8;
 		@apply rounded-3xl;
 		@apply overflow-hidden;
-	}
-
-	.product-action > div > * {
-		@apply cursor-pointer;
-		@apply bg-primary-6;
-		@apply px-1;
-		padding-left: 0.5rem;
-		padding-top: 0.2rem;
-		@apply flex;
-		@apply justify-center;
-		@apply items-center;
-		@apply text-lg;
-	}
-
-	.product-action > div > *:nth-child(2) {
-		@apply p-0;
-	}
-
-	.product-action > div > *:nth-child(odd) > img {
-		max-height: fit-content;
-	}
-
-	.action-button {
-		@apply hover:text-accent-8;
+		@apply group-hover:border-accent-8;
+		@apply hover:bg-accent-8;
+		@apply hover:text-primary-8;
+		@apply font-bold;
+		@apply p-2;
+		@apply py-1;
+		@apply text-sm;
+		@apply text-center;
 	}
 
 	/*------------------------------------------------------------------------- */
@@ -315,9 +319,18 @@
 	.bottom-nav {
 		@apply fixed;
 		@apply bottom-0;
+
+		@apply block;
 		@apply w-full;
-		@apply shadow-sm;
-		@apply shadow-primary-2;
+		@apply h-10;
+		@apply sm:hidden;
+		@apply border-t-2;
+
+		@apply text-2xl;
+
+		@apply bg-primary-4;
+		@apply border-primary-8;
+		@apply drop-shadow-secondary;
 		@apply z-50;
 	}
 

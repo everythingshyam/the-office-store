@@ -51,26 +51,33 @@ fetch('./products.json')
 				product.isLiked == true
 					? './src/icons/heart_filled.svg'
 					: './src/icons/heart_empty.svg';
+
 			let insideHTML = `
-				<div class="product-top">`;
+	<div class="product-top">`;
+
 			if(product.highlightText!="")
-				insideHTML+=`<div class="product-highlight">${product.highlightText}</div>`;
-					insideHTML+=`<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
-					<img class="product-img" src="${product.imageURL}" alt="">
-				</div>
-				<div class="product-meta">
-					<div class="rating-info">
-						<div>
-							<img src="./src/icons/rating.svg" alt="">
-							<div>${product.rating}</div>
-						</div>
-						<div>(${product.ratingCount})</div>
-					</div>
-					<h3 class="long-text product-name">${product.productName}</h3>
-					<div class="long-text manufacturer-name">${product.manufacturerName}</div>
-					<div class="product-footer">
-						<div class="price-info">
-							<div class="price-primary">₹ ${product.price}</div>
+				insideHTML+=`
+		<div class="product-highlight">${product.highlightText}
+		</div>`;
+
+			insideHTML+=`
+		<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
+		<img class="product-img" src="${product.imageURL}" alt="">
+	</div>
+	<div class="product-bottom">
+		<div class="rating-info">
+			<div>
+				<img src="./src/icons/rating.svg" alt="">
+				<div>${product.rating}</div>
+			</div>
+			<div>(${product.ratingCount})</div>
+		</div>
+		<h3 class="long-text product-name">${product.productName}</h3>
+		<div class="product-meta">
+			<div class="long-text manufacturer-name">${product.manufacturerName}</div>
+			<div class="product-footer">
+				<div class="price-info">
+					<div class="price-primary">₹ ${product.price}</div>
 				`;
 			if (product.price != product.oldPrice) {
 				const discount = Math.floor(
@@ -78,25 +85,23 @@ fetch('./products.json')
 						100
 				);
 				insideHTML += `
-							<div class="price-secondary">
-								<div>₹ ${product.oldPrice}</div>
-								<div>${discount}% off</div>
-							</div>
+					<div class="price-secondary">
+							<div>₹ ${product.oldPrice}</div>
+							<div>${discount}% off</div>
+					</div>
 					`;
 			}
 			insideHTML += `
-						</div>
-						<div class="product-action">
-                            <div>
-								<div class="product-count action-button">0</div>
-								<div class="increase-count action-button">
-									<img src="./src/icons/increase-to-cart.svg" alt="">
-								</div>
-							</div>
-                        </div>
-					</div>
 				</div>
-			`;
+			</div>
+		</div>
+		<div class="product-action">
+        	<div class="add-to-cart-btn">
+            	Add to Cart
+        	</div>
+    	</div>
+	</div>`;
+
 			productCard.innerHTML = insideHTML;
 			productsCard.appendChild(productCard);
 		});
@@ -117,74 +122,13 @@ fetch('./products.json')
 			});
 		});
 
-		const decreaseButtons = document.querySelectorAll('.decrease-count');
-		const productCounts = document.querySelectorAll('.product-count');
-		const increaseButtons = document.querySelectorAll('.increase-count');
+		const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-		decreaseButtons.forEach((button) => {
-			button.addEventListener('mouseover', () => {
-				button.children[0].setAttribute(
-					'src',
-					'./src/icons/decrease-from-cart-primary.svg'
-				);
-			});
-			button.addEventListener('mouseout', () => {
-				button.children[0].setAttribute(
-					'src',
-					'./src/icons/decrease-from-cart.svg'
-				);
-			});
+		addToCartButtons.forEach((button) => {
 			button.addEventListener('click', () => {
-				const count = button.nextElementSibling;
-				if (count.innerHTML > 0) {
-					count.innerHTML = parseInt(count.innerHTML) - 1;
-				}
 				const id =
 					button.parentElement.parentElement.parentElement
-						.parentElement.parentElement.id;
-				if (cart[id] > 1) {
-					cart[id]--;
-				} else if (cart[id] == 1) {
-					delete cart[id];
-				}
-				updateCartStatus();
-				updateCartTitle();
-			});
-		});
-
-		productCounts.forEach((count) => {
-			count.addEventListener('click', () => {
-				let id =
-					count.parentElement.parentElement.parentElement
-						.parentElement.parentElement.id;
-				if (cart[id] > 0) {
-					delete cart[id];
-				}
-				count.innerHTML = 0;
-				updateCartStatus();
-				updateCartTitle();
-			});
-		});
-
-		increaseButtons.forEach((button) => {
-			button.addEventListener('mouseover', () => {
-				button.children[0].setAttribute(
-					'src',
-					'./src/icons/increase-to-cart-primary.svg'
-				);
-			});
-			button.addEventListener('mouseout', () => {
-				button.children[0].setAttribute(
-					'src',
-					'./src/icons/increase-to-cart.svg'
-				);
-			});
-			button.addEventListener('click', () => {
-				const count = button.previousElementSibling;
-				count.innerHTML = parseInt(count.innerHTML) + 1;
-				const id =
-					button.parentElement.parentElement.parentElement
-						.parentElement.parentElement.id;
+						.parentElement.id;
 				if (cart[id] > 0) {
 					cart[id]++;
 				} else {
