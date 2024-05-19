@@ -4,6 +4,10 @@
 
 -   Adding more sections to the landing page
 
+-   ISSUE: Uncaught TypeError: Cannot read properties of undefined (reading 'price')
+    at updateCartTitle (main.js:36:38)
+    at HTMLDivElement.<anonymous> (main.js:149:5)
+
 ### To Start Working On
 
 -   The Hero Section (slideshow part)

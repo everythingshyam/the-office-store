@@ -1,4 +1,9 @@
-const productsCard = document.querySelector('.products-card');
+const productsCardRecentlyViewed = document.querySelector(
+	'.products-card-recently-viewed'
+);
+const productsCardBestSelling = document.querySelector(
+	'.products-card-best-selling'
+);
 const cartStatus = document.querySelector('#cart-status');
 const cartButton = document.querySelector('#cart-button');
 
@@ -51,16 +56,20 @@ fetch('./products.json')
 				product.isLiked == true
 					? './src/icons/heart_filled.svg'
 					: './src/icons/heart_empty.svg';
+			const productCard2 = document.createElement('div');
+			productCard2.classList.add('product-card');
+			productCard2.classList.add('group');
+			productCard2.id = product.id;
 
 			let insideHTML = `
 	<div class="product-top">`;
 
-			if(product.highlightText!="")
-				insideHTML+=`
+			if (product.highlightText != '')
+				insideHTML += `
 		<div class="product-highlight">${product.highlightText}
 		</div>`;
 
-			insideHTML+=`
+			insideHTML += `
 		<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
 		<img class="product-img" src="${product.imageURL}" alt="">
 	</div>
@@ -103,7 +112,9 @@ fetch('./products.json')
 	</div>`;
 
 			productCard.innerHTML = insideHTML;
-			productsCard.appendChild(productCard);
+			productCard2.innerHTML = insideHTML;
+			productsCardBestSelling.appendChild(productCard);
+			productsCardRecentlyViewed.appendChild(productCard2);
 		});
 
 		const likeButtons = document.querySelectorAll('.product-like-btn');

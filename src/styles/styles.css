@@ -452,6 +452,10 @@ video {
   box-sizing: border-box;
 }
 
+.highlight-on-hover:hover{
+  font-weight: 700;
+}
+
 body {
   font-family: 'Nunito Sans', Cambria, Georgia, Courier, monospace;
   font-size: 18px;
@@ -967,13 +971,6 @@ footer > ul{
   padding-right: 0.5rem;
   font-weight: 400;
   font-size: 1em;
-}
-
-.footer-heading:hover{
-  font-weight: 700;
-}
-
-.footer-heading{
   --tw-border-opacity: 1;
   border-color: rgb(217 222 228 / var(--tw-border-opacity));
 }
@@ -987,13 +984,6 @@ footer > ul{
   padding: 0.25rem;
   font-weight: 400;
   display: inline;
-}
-
-.footer-sublist > ul a:hover{
-  font-weight: 700;
-}
-
-.footer-sublist > ul a{
   cursor: pointer;
 }
 
