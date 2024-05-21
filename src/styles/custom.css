@@ -338,6 +338,23 @@
 		@apply z-50;
 	}
 
+	.nav-items-container{
+		@apply grid;
+		@apply grid-cols-5;
+		@apply h-full;
+	}
+
+	.nav-bottom-item {
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+		@apply h-full;
+		@apply w-full;
+		@apply hover:bg-accent-8;
+		@apply hover:shadow-round;
+		@apply cursor-pointer;
+	}
+
 	/* ------------------------------------------------------------------------- */
 
 	footer {
