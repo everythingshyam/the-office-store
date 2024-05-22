@@ -2,6 +2,8 @@
 
 ### In Progress
 
+-   Widen Sections on smaller screens
+
 -   Adding more sections to the landing page
 
 -   ISSUE: Uncaught TypeError: Cannot read properties of undefined (reading 'price')
