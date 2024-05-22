@@ -330,8 +330,6 @@
 		@apply sm:hidden;
 		@apply border-t-2;
 
-		@apply text-2xl;
-
 		@apply bg-primary-4;
 		@apply border-primary-8;
 		@apply drop-shadow-secondary;
@@ -344,15 +342,27 @@
 		@apply h-full;
 	}
 
-	.nav-bottom-item {
+	.nav-items-container>div {
 		@apply flex;
+		@apply w-full;
 		@apply justify-center;
 		@apply items-center;
-		@apply h-full;
-		@apply w-full;
+	}
+	
+	.nav-bottom-item{
+		@apply w-8;
+		@apply aspect-square;
+		@apply rounded-full;
+		@apply p-2;
+		@apply self-center;
+		@apply cursor-pointer;
 		@apply hover:bg-accent-8;
 		@apply hover:shadow-round;
-		@apply cursor-pointer;
+	}
+
+	.active-tab{
+		background-color: #007BFF;
+		box-shadow: 0 0 8px rgb(100 100 100 / 0.5);
 	}
 
 	/* ------------------------------------------------------------------------- */

@@ -150,5 +150,16 @@ fetch('./products.json')
 			});
 		});
 
+		const navButtons = document.querySelectorAll('.nav-bottom-item');
+		navButtons.forEach((button) => {
+			button.addEventListener('click', () => {
+				navButtons.forEach((button) => {
+					button.classList.remove('active-tab');
+				});
+				button.classList.add('active-tab');
+				console.log("Navitem clicked");
+			});
+		});
+
 		// ==========================
 	});

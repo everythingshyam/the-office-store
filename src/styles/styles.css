@@ -902,7 +902,6 @@ header{
 
 .bottom-nav{
   border-top-width: 2px;
-  font-size: 1.5em;
   --tw-bg-opacity: 1;
   background-color: rgb(217 222 228 / var(--tw-bg-opacity));
   --tw-border-opacity: 1;
@@ -918,12 +917,20 @@ header{
   height: 100%;
 }
 
-.nav-bottom-item{
+.nav-items-container>div{
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+}
+
+.nav-bottom-item{
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  align-self: center;
+  cursor: pointer;
 }
 
 .nav-bottom-item:hover{
@@ -934,8 +941,9 @@ header{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.nav-bottom-item{
-  cursor: pointer;
+.active-tab{
+  background-color: #007BFF;
+  box-shadow: 0 0 8px rgb(100 100 100 / 0.5);
 }
 
 /* ------------------------------------------------------------------------- */
