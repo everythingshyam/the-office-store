@@ -1,9 +1,6 @@
 const productsCardRecentlyViewed = document.querySelector(
 	'.products-card-recently-viewed'
 );
-const productsCardBestSelling = document.querySelector(
-	'.products-card-best-selling'
-);
 const cartStatus = document.querySelector('#cart-status');
 const cartButton = document.querySelector('#cart-button');
 
@@ -43,7 +40,7 @@ function updateCartTitle() {
 	cartButton.setAttribute('title', cartTitleText);
 }
 
-fetch('./products.json')
+fetch('../../products.json')
 	.then((response) => response.json())
 	.then((data) => {
 		products = data;
@@ -54,12 +51,8 @@ fetch('./products.json')
 			productCard.id = product.id;
 			likeImageURL =
 				product.isLiked == true
-					? './src/icons/heart_filled.svg'
-					: './src/icons/heart_empty.svg';
-			const productCard2 = document.createElement('div');
-			productCard2.classList.add('product-card');
-			productCard2.classList.add('group');
-			productCard2.id = product.id;
+					? '../icons/heart_filled.svg'
+					: '../icons/heart_empty.svg';
 
 			let insideHTML = `
 	<div class="product-top">`;
@@ -71,12 +64,12 @@ fetch('./products.json')
 
 			insideHTML += `
 		<img class="product-like-btn" src="${likeImageURL}" alt="Like Product Button">
-		<img class="product-img" src="./${product.imageURL}" alt="">
+		<img class="product-img" src="../../${product.imageURL}" alt="">
 	</div>
 	<div class="product-bottom">
 		<div class="rating-info">
 			<div>
-				<img src="./src/icons/rating.svg" alt="">
+				<img src="../icons/rating.svg" alt="">
 				<div>${product.rating}</div>
 			</div>
 			<div>(${product.ratingCount})</div>
@@ -112,9 +105,7 @@ fetch('./products.json')
 	</div>`;
 
 			productCard.innerHTML = insideHTML;
-			productCard2.innerHTML = insideHTML;
-			productsCardBestSelling.appendChild(productCard);
-			productsCardRecentlyViewed.appendChild(productCard2);
+			productsCardRecentlyViewed.appendChild(productCard);
 		});
 
 		const likeButtons = document.querySelectorAll('.product-like-btn');

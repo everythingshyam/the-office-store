@@ -16,7 +16,7 @@
         "id": 3,
         "isLiked": false,
         "highlightText": "",
-        "imageURL": "./db/product-images/product113.jpg",
+        "imageURL": "db/product-images/product113.jpg",
         "productName": "Product 3",
         "manufacturerName": "Manufacturer 3",
         "rating": 3.5,

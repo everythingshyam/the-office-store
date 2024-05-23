@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/styles.css">
-    <title>The Office Store - Stationary and Office Products</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>The Office Store - Search Page</title>
 </head>
 
 <body>
@@ -20,58 +20,56 @@
                 <div class="logo-text-bit">Store</div>
             </div>
             <div class="header-icons">
-                <a class="header-icon" href="./src/html/search.html">
-                    <img title="Ctrl + K or CMD + K to Search" src="./src/icons/search.svg"></img></a>
-                <a class="header-icon" href="./src/html/cart.html">
-                    <img id="cart-button" title="Cart is empty" src="./src/icons/cart.svg"></img>
-                    <sup id="cart-status"></sup>
-                </a>
-                <div class="header-icon menu-btn">
-                    <img src="./src/icons/hamburger.svg"></img>
+                <div class="header-icon"><img title="Ctrl + K or CMD + K to Search" src="../icons/search.svg"></img>
                 </div>
+                <div class="header-icon"><img id="cart-button" title="Cart is empty" src="../icons/cart.svg"></img>
+                    <sup id="cart-status"></sup>
+                </div>
+                <div class="header-icon"><img src="../icons/hamburger.svg"></img></div>
             </div>
         </header>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <!-- <div
-                class="flex w-full flex-col justify-center text-center text-3xl font-bold text-primary-6 drop-shadow-accent sm:text-5xl md:text-6xl">
-                WORK IN PROGRESS
-            </div> -->
-            <div class="slideshow-container">
-                <img src="./db/banners/TheOfficeStoreSaleBanner.png" alt="Summer Sale Banner">
-            </div>
-        </section>
         <!-- Main Container -->
         <section class="main-container">
-            <div class="product-palette">
-                <h1>Recently Viewed</h1>
-                <hr>
-                <div class="products-card products-card-recently-viewed">
+            <div class="search-header">
+                <div class="search-bar
+                    ">
+                    <input type="text" id="search-input" placeholder="Search for products, brands and more"></input>
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="search-suggestions">
+                    Search suggestions here
+                </div>
+                <div class="filter-section">
+                    <div class="filter-chips">
+                        Filter Chips here
+                    </div>
+                    <div class="filter-menu">
+                        Filter menu here
+                    </div>
                 </div>
             </div>
-            <div class="product-palette">
-                <h1>Best Selling</h1>
-                <hr>
-                <div class="products-card products-card-best-selling">
+            <div class="search-results product-palette">
+                <div class="products-card products-card-recently-viewed">
                 </div>
             </div>
         </section>
         <section class="bottom-nav">
             <div class="nav-items-container">
-                <a href="./src/html/explore.html">
-                    <img id="explore-btn" title="Explore" class="nav-bottom-item" src="./src/icons/hash.svg"></img>
-                </a>
-                <a href="./src/html/search.html">
-                    <img id="search-btn" title="Search" class="nav-bottom-item" src="./src/icons/search.svg"></img>
-                </a>
-                <a href="./src/html/index.html">
-                    <img id="home-btn" title="Home" class="nav-bottom-item active-tab" src="./src/icons/home.svg"></img>
-                </a>
-                <a href="./src/html/cart.html">
-                    <img id="cart-btn" title="Cart" class="nav-bottom-item" src="./src/icons/cart.svg"></img>
-                </a>
-                <div class="menu-btn">
-                    <img id="profile-btn" title="Profile" class="nav-bottom-item" src="./src/icons/hamburger.svg"></img>
+                <div>
+                    <img id="explore-btn" title="Explore" class="nav-bottom-item" src="../icons/hash.svg"></img>
+                </div>
+                <div>
+                    <img id="search-btn" title="Search" class="nav-bottom-item active-tab"
+                        src="../icons/search.svg"></img>
+                </div>
+                <div>
+                    <img id="home-btn" title="Home" class="nav-bottom-item" src="../icons/home.svg"></img>
+                </div>
+                <div>
+                    <img id="cart-btn" title="Cart" class="nav-bottom-item" src="../icons/cart.svg"></img>
+                </div>
+                <div>
+                    <img id="profile-btn" title="Profile" class="nav-bottom-item" src="../icons/user.svg"></img>
                 </div>
             </div>
         </section>
@@ -151,7 +149,7 @@
             </div>
         </footer>
     </div>
-    <script src="./src/script/main.js"></script>
+    <script src="../script/search.js"></script>
 </body>
 
 </html>

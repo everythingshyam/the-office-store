@@ -55,7 +55,8 @@
 		@apply ml-1;
 		@apply items-center;
 
-		@apply text-2xl;
+		@apply text-4xl;
+		@apply sm:text-2xl;
 		@apply drop-shadow-sm;
 
 		@apply cursor-pointer;
@@ -121,19 +122,22 @@
 		@apply border-t-2;
 		@apply border-accent-6;
 		@apply bg-primary-6;
-		@apply p-4;
+		@apply p-0;
+		@apply sm:p-4;
 		@apply shadow-secondary-2;
 		@apply drop-shadow-2xl;
+		@apply min-h-dvh;
 	}
 
 	.product-palette {
 		@apply p-4;
 		@apply bg-primary-4;
-		@apply rounded-2xl;
+		@apply rounded-none;
+		@apply sm:rounded-2xl;
 		@apply shadow-sm;
 		@apply shadow-secondary-4;
 		@apply m-0;
-		@apply mb-4;
+		@apply sm:mb-4;
 		@apply border-spacing-0.5;
 		@apply border-secondary-2;
 	}
@@ -141,7 +145,8 @@
 	.product-palette > h1 {
 		@apply mb-1;
 		@apply pl-2;
-		@apply text-xl;
+		@apply text-2xl;
+		@apply sm:text-xl;
 		@apply font-semibold;
 		@apply text-accent-8;
 	}
@@ -319,6 +324,9 @@
 	}
 
 	/*------------------------------------------------------------------------- */
+	/* Search Page CSS */
+
+	/*------------------------------------------------------------------------- */
 
 	.bottom-nav {
 		@apply fixed;
@@ -342,7 +350,7 @@
 		@apply h-full;
 	}
 
-	.nav-items-container > div {
+	.nav-items-container > * {
 		@apply flex;
 		@apply w-full;
 		@apply justify-center;
@@ -420,7 +428,7 @@
 	.footer-text {
 		@apply border-t-1;
 		@apply pt-4;
-		@apply pb-7;
+		@apply pb-12;
 		@apply sm:pb-1;
 		@apply text-center;
 		@apply text-xs;

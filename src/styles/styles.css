@@ -509,7 +509,16 @@ header{
   display: flex;
   margin-left: 0.25rem;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 2.25em;
+}
+
+@media (min-width: 530px){
+  .top-logo{
+    font-size: 1.5em;
+  }
+}
+
+.top-logo{
   --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   cursor: pointer;
@@ -606,25 +615,52 @@ header{
   border-color: rgb(59 158 253 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(233 235 238 / var(--tw-bg-opacity));
-  padding: 1rem;
+  padding: 0px;
+}
+
+@media (min-width: 530px){
+  .main-container{
+    padding: 1rem;
+  }
+}
+
+.main-container{
   --tw-shadow-color: #9FA8B5;
   --tw-shadow: var(--tw-shadow-colored);
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  min-height: 100dvh;
 }
 
 .product-palette{
   padding: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(217 222 228 / var(--tw-bg-opacity));
-  border-radius: 1rem;
+  border-radius: 0px;
+}
+
+@media (min-width: 530px){
+  .product-palette{
+    border-radius: 1rem;
+  }
+}
+
+.product-palette{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #70767F;
   --tw-shadow: var(--tw-shadow-colored);
   margin: 0px;
-  margin-bottom: 1rem;
+}
+
+@media (min-width: 530px){
+  .product-palette{
+    margin-bottom: 1rem;
+  }
+}
+
+.product-palette{
   --tw-border-spacing-x: 0.125rem;
   --tw-border-spacing-y: 0.125rem;
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
@@ -635,7 +671,16 @@ header{
 .product-palette > h1{
   margin-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 1.25em;
+  font-size: 1.5em;
+}
+
+@media (min-width: 530px){
+  .product-palette > h1{
+    font-size: 1.25em;
+  }
+}
+
+.product-palette > h1{
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(0 123 255 / var(--tw-text-opacity));
@@ -886,6 +931,10 @@ header{
 
 /*------------------------------------------------------------------------- */
 
+/* Search Page CSS */
+
+/*------------------------------------------------------------------------- */
+
 .bottom-nav{
   position: fixed;
   bottom: 0px;
@@ -917,7 +966,7 @@ header{
   height: 100%;
 }
 
-.nav-items-container > div{
+.nav-items-container > *{
   display: flex;
   width: 100%;
   justify-content: center;
@@ -1024,7 +1073,7 @@ footer > ul{
 .footer-text{
   border-top-width: 1px;
   padding-top: 1rem;
-  padding-bottom: 1.75rem;
+  padding-bottom: 3rem;
 }
 
 @media (min-width: 530px){
