@@ -113,13 +113,13 @@ fetch('../../products.json')
 			button.addEventListener('click', () => {
 				const isLiked =
 					button.getAttribute('src') ===
-					'./src/icons/heart_filled.svg';
+					'../icons/heart_filled.svg';
 				if (isLiked) {
 					// backend code here
-					button.setAttribute('src', './src/icons/heart_empty.svg');
+					button.setAttribute('src', '../icons/heart_empty.svg');
 				} else {
 					// backend code here
-					button.setAttribute('src', './src/icons/heart_filled.svg');
+					button.setAttribute('src', '../icons/heart_filled.svg');
 				}
 			});
 		});
