@@ -14,23 +14,27 @@
     <div>
         <!-- Header Section -->
         <header>
-            <div class="top-logo">
+            <a class="top-logo" href="https://www.google.com/">
                 <div class="logo-text-bit">The</div>
                 <div class="logo-text-bit text-accent-8">Office</div>
                 <div class="logo-text-bit">Store</div>
-            </div>
+            </a>
             <div class="header-icons">
                 <a class="header-icon" href="./src/html/search.html">
                     <img title="Ctrl + K or CMD + K to Search" src="./src/icons/search.svg"></img></a>
                 <a class="header-icon" href="./src/html/cart.html">
                     <img id="cart-button" title="Cart is empty" src="./src/icons/cart.svg"></img>
-                    <sup id="cart-status"></sup>
+                    <!-- <sup id="cart-status">2</sup> -->
                 </a>
-                <div class="header-icon menu-btn">
-                    <img src="./src/icons/hamburger.svg"></img>
+                <div class="header-icon menu-btn" onclick="toggleMenu()">
+                    <img id="menu-btn-img" src="./src/icons/hamburger.svg"></img>
                 </div>
             </div>
         </header>
+        <!-- Floating Menu Bar -->
+        <div id="menu-pane" class="menu-pane">
+            <p>This is the menu pane</p>
+        </div>
         <!-- Hero Section -->
         <section class="hero-section">
             <!-- <div
