@@ -173,7 +173,6 @@
 		@apply shadow-primary-2;
 		@apply cursor-pointer;
 		@apply border-0;
-		/* @apply hover:border-4; */
 		@apply hover:border-primary-8;
 		@apply p-0;
 		@apply hover:shadow-lg;
@@ -216,8 +215,6 @@
 	.product-bottom {
 		@apply flex;
 		@apply flex-col;
-		/* @apply min-h-28;
-		@apply lg:min-h-32; */
 		@apply h-max;
 		@apply p-2;
 		@apply m-0;
@@ -326,18 +323,73 @@
 	/*------------------------------------------------------------------------- */
 	/* Search Page CSS */
 
+	.search-header{
+		@apply p-4;
+		@apply bg-primary-4;
+		@apply rounded-none;
+		@apply sm:rounded-2xl;
+		@apply shadow-sm;
+		@apply shadow-secondary-4;
+		@apply m-0;
+		@apply sm:mb-4;
+		@apply border-spacing-0.5;
+		@apply border-secondary-2;
+	}
+
+	.search-bar {
+		@apply grid;
+		grid-template-columns: 9fr 1fr;
+		@apply justify-around;
+		@apply items-center;
+		@apply bg-primary-8;
+		@apply rounded-3xl;
+		@apply shadow-sm;
+		@apply shadow-primary-2;
+		@apply cursor-pointer;
+		@apply border-0;
+		@apply hover:border-primary-8;
+		@apply p-0;
+		@apply hover:shadow-lg;
+		@apply hover:transition-all;
+		@apply overflow-hidden;
+		width: 60vw;
+		@apply h-10;
+	}
+	
+	.search-bar input{
+		@apply w-full;
+		@apply h-full;
+		@apply rounded-3xl;
+		@apply border-1;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		@apply pl-2;
+	}
+
+	.search-bar button{
+		@apply w-full;
+		@apply h-full;
+		@apply rounded-3xl;
+		@apply border-1;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-right: 0;
+		outline: none;
+		@apply flex;
+		@apply justify-around;
+		@apply items-center;
+	}
+
 	/*------------------------------------------------------------------------- */
 
 	.bottom-nav {
 		@apply fixed;
 		@apply bottom-0;
-
 		@apply block;
 		@apply w-full;
 		@apply h-14;
 		@apply sm:hidden;
 		@apply border-t-2;
-
 		@apply bg-primary-4;
 		@apply border-primary-8;
 		@apply drop-shadow-secondary;

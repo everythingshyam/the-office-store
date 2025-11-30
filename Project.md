@@ -2,7 +2,7 @@
 
 ### In Progress
 
--   Widen Sections on smaller screens
+-   ~~Widen Sections on smaller screens~~
 
 -   Adding more sections to the landing page
 
